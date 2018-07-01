@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index Page</title>
+</head>
+<body>
+	<h4>INDEX PAGE</h4>
+	<p th:text="${now}">now</p>
+	<label th:text="${data}">data</label>
+	<table>
+		<tr><td>ID</td><td>NAME</td><td>MAIL</td></tr>
+		<tr th:each="user:${data}">
+			<td th:text="#user.id"></td>
+			<td th:text="#user.password"></td>
+			<td th:text="#user.mail"></td>
+		</tr>
+	</table>
+</body>
+</html>
